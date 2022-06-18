@@ -46,6 +46,7 @@ public class ProducerRabbitConfiguration {
         return BindingBuilder.bind(queue()).to(exchange()).with(queue);
     }
 
+    @Bean
     public Binding bindingDeadLetter(){
         return BindingBuilder.bind(deadLetter()).to(exchange()).with(deadLetter);
     }
